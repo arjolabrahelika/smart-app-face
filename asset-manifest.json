@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/smart-app-face/static/css/main.fc8fff1e.chunk.css",
+    "main.js": "/smart-app-face/static/js/main.994db866.chunk.js",
+    "main.js.map": "/smart-app-face/static/js/main.994db866.chunk.js.map",
+    "runtime-main.js": "/smart-app-face/static/js/runtime-main.3ff08e95.js",
+    "runtime-main.js.map": "/smart-app-face/static/js/runtime-main.3ff08e95.js.map",
+    "static/css/2.6d7c7915.chunk.css": "/smart-app-face/static/css/2.6d7c7915.chunk.css",
+    "static/js/2.a99a02a0.chunk.js": "/smart-app-face/static/js/2.a99a02a0.chunk.js",
+    "static/js/2.a99a02a0.chunk.js.map": "/smart-app-face/static/js/2.a99a02a0.chunk.js.map",
+    "static/js/3.938dd404.chunk.js": "/smart-app-face/static/js/3.938dd404.chunk.js",
+    "static/js/3.938dd404.chunk.js.map": "/smart-app-face/static/js/3.938dd404.chunk.js.map",
+    "index.html": "/smart-app-face/index.html",
+    "static/css/2.6d7c7915.chunk.css.map": "/smart-app-face/static/css/2.6d7c7915.chunk.css.map",
+    "static/css/main.fc8fff1e.chunk.css.map": "/smart-app-face/static/css/main.fc8fff1e.chunk.css.map",
+    "static/js/2.a99a02a0.chunk.js.LICENSE.txt": "/smart-app-face/static/js/2.a99a02a0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3ff08e95.js",
+    "static/css/2.6d7c7915.chunk.css",
+    "static/js/2.a99a02a0.chunk.js",
+    "static/css/main.fc8fff1e.chunk.css",
+    "static/js/main.994db866.chunk.js"
+  ]
+}
