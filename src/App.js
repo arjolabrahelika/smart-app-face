@@ -126,7 +126,7 @@ this.setState({input: event.target.value})
 
 onButtonSubmit= () => {
 this.setState({ imageUrl : this.state.input })
-fetch('http://localhost:3001/imageurl',{
+fetch('https://secure-citadel-45276.herokuapp.com/imageurl',{
         method:'post',
         headers:{'content-Type':'application/json'},
         body:JSON.stringify({
@@ -137,7 +137,7 @@ fetch('http://localhost:3001/imageurl',{
   .then(response =>response.json())   
   .then(response => {
     if(response){
-      fetch('http://localhost:3001/image',{
+      fetch('https://secure-citadel-45276.herokuapp.com/image',{
         method:'put',
         headers:{'content-Type':'application/json'},
         body:JSON.stringify({
@@ -147,13 +147,11 @@ fetch('http://localhost:3001/imageurl',{
     })
     .then(response =>response.json() )
     .then(count =>{
-      this.setState({ user:{
-        entries: count
-      }})
+      this.setState( this.setState(Object.assign(this.state.user, { entries: count})))
     })
-    .catch( err =>console.log(err))
+  }
     this.displayFaceBox(this.calculateFaceLocation(response))
-  } })
+  } )
    
     .catch( err => console.log(err))   
   
@@ -185,8 +183,8 @@ render(){
         ? <div>
          <Logo/>
         <Rank 
-          name={this.state.user.name }
-          entries= {this.state.user.entries}
+          name = { this.state.user.name }
+          entries = {this.state.user.entries}
         />
         <ImageLinkForm 
         onInputChange={this.onInputChange} 
