@@ -8,7 +8,8 @@ class Signin extends React.Component{
     this.state={
       signInEmail:'',
       signInPassword:'',
-      err:''
+      errors:''
+     
     }
   }
 
@@ -21,7 +22,9 @@ class Signin extends React.Component{
     this.setState({ signInPassword: event.target.value})
   }
   
+
 onSubmitSignIn= () =>{
+  
   fetch('https://secure-citadel-45276.herokuapp.com/signin',{
     method:'post',
     headers:{'content-Type':'application/json'},
@@ -35,10 +38,13 @@ onSubmitSignIn= () =>{
      if(user.id){
        this.props.loadUser(user)
        this.props.onRouteChange('home');
-}
+} else{
+  this.setState({errors:' * Wrong credentials'})}
   })
-}
+  
+  
 
+}
 render(){
   const { onRouteChange }=this.props;
   return(
@@ -55,6 +61,7 @@ render(){
               id="email-address"
               onChange={this.onEmailChange}  
             />
+         
           </div>
           <div className="mv3">
             <label className="db fw6 lh-copy f6" htmlFor="password">Password</label>
@@ -64,10 +71,12 @@ render(){
                id="password"
                onChange={this.onPasswordChange}
             />
+           
           </div>
      
         </fieldset>
         <div className="">
+        
           <input 
           
           className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib" 
@@ -77,7 +86,7 @@ render(){
           />
         </div>
         <div className="lh-copy mt3">
-        <p className='red'>{this.state.err}</p>
+        <p className='pa1 red'>{this.state.errors}</p>
           <p onClick = {() =>{onRouteChange('register') }}  className="f6 link dim black db pointer">Register</p>
           
         </div>
@@ -86,8 +95,8 @@ render(){
     </article>
     );
 }
-
 }
-
+ 
+  
 
 export default Signin ;
